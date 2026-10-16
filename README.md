@@ -1,0 +1,6 @@
+# StockWise AI (compact hackathon core)
+Terminal 1: `pip install -r requirements.txt && uvicorn backend.main:app --port 8000`. Terminal 2: `cd frontend && npm install && npm run dev` then open http://localhost:5173 (demo data loads automatically). Single-server mode: `npm run build` in frontend, then open http://localhost:8000. Tests: `pytest`. See docs/.
+AI model (optional): install Ollama, `ollama pull qwen2.5:0.5b`. Qwen2.5-0.5B is listed by Qwen as Apache-2.0 - verify on the official model page before use (open-weight; training data not open). Without it the assistant returns computed facts only (`llm_used:false`). Real model inference was NOT tested.
+Method: forecast = weekday-seasonal exponential smoothing vs 14-day-mean baseline, backtested on the last 7 days (chronological); the lower-MAE method is used. Anomalies = robust z-score (median/MAD, threshold 3.5). Restock: target = daily forecast x (lead + 7 cover + 2 safety days); order = max(0, target - stock - incoming). Budget = exact integer program (scipy MILP) maximising priority-weighted funded share of need under budget and min/max constraints; greedy fallback if scipy is unavailable.
+Sample data is synthetic (seed 42); inserted anomaly: P03 Lays Chips, 70 units, 10 days before end. Not evidence of real-world accuracy.
+API docs at /docs. Analyses are computed on demand, not stored by ID.

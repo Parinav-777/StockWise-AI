@@ -1,0 +1,17 @@
+product_id,name,category,unit_cost,price,stock,min_stock,incoming,lead_days
+P01,Parle-G Biscuits,Biscuits,8,10,60,40,0,3
+P02,Good Day Biscuits,Biscuits,18,22,50,30,0,3
+P03,Lays Chips,Chips,16,20,35,25,0,4
+P04,Kurkure,Chips,16,20,70,25,0,4
+P05,Lux Soap,Soap,28,35,40,20,0,5
+P06,Dettol Soap,Soap,34,42,25,15,0,5
+P07,Basmati Rice 5kg,Rice,420,480,12,6,0,6
+P08,Sona Masoori Rice 10kg,Rice,610,690,4,4,10,6
+P09,Sunflower Oil 1L,Cooking oil,140,155,18,12,0,4
+P10,Groundnut Oil 1L,Cooking oil,190,210,30,10,0,4
+P11,Milk 500ml,Milk,24,27,45,40,0,1
+P12,Curd 400g,Milk,30,35,16,15,0,1
+P13,Namkeen Mixture,Snacks,45,55,26,12,0,3
+P14,Instant Noodles,Snacks,11,14,90,50,0,3
+P15,Notebook A4,Stationery,30,40,22,15,0,7
+P16,Ball Pen Pack,Stationery,40,55,60,10,0,7
